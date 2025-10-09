@@ -28,3 +28,35 @@ Analogy: A customer can't buy a loaf of bread if the shelf is empty. They must w
 
 3.) Race Condition (Accessing the Shelf at the Same Time):
 The Producer and Consumer must not access and modify the buffer at the exact same time, as this could lead to corrupt data or an inconsistent state.
+
+
+
+PSEUDOCODE
+
+mx stands for mutex for mutual Exclusion
+Full(initialize with value 0)
+Empty(initialize with value n)
+
+--->Producer
+
+do{
+    wait(empty)  //wait until empty>0 then empty--
+    lock(mutex)
+    // CRITICAL SECTION
+    signal(mutex)
+    signal(full) // full++
+}while(1)
+
+
+
+((BUFFER))
+
+--->Consumer
+
+do{
+    wait(full) //wait until full>0,then full--
+    wait(mutex)
+    // CRITICAL SECTION
+    signal(mutex)
+    signal(empty)  //++empty
+}while(1)
