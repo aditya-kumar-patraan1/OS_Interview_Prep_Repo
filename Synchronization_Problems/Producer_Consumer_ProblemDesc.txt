@@ -33,9 +33,9 @@ The Producer and Consumer must not access and modify the buffer at the exact sam
 
 PSEUDOCODE
 
-mx stands for mutex for mutual Exclusion
-Full(initialize with value 0)
-Empty(initialize with value n)
+mx stands for mutex for mutual Exclusion   -->This is Binary Semaphore
+Full(initialize with value 0)   -->This is Counting Semaphore
+Empty(initialize with value n)  -->This is also a Counting Semaphore
 
 --->Producer
 
