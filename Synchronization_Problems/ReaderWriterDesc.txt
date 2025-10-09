@@ -1,0 +1,34 @@
+
+READER-WRITER PROBLEM
+
+This Problem state that if there is writing operation in file by writer then at that time
+no other writer or reader is permit to do their operation
+
+Similarly,if there is reading task carry on by the reader then no writer is allowed to enter and perform their operation but all other reader are allowed to carry on their operation but i synchronized way.
+
+1.)readCount
+2.) Mutex
+3.) wrt
+
+
+--->writer
+
+wait(wrt)
+CRITICAL SECTION
+signal(wrt)
+
+--->reader
+
+wait(mutex)
+readCount++
+if(readCount == 1){
+    wait(wrt)    --> wrt=0
+}
+signal(mutex)
+CRITICAL SECTION 
+wait(mutex)
+readCount--
+if(readCount == 0){
+    signal(wrt)   //---> wrt=1
+}
+signal(mutex)
