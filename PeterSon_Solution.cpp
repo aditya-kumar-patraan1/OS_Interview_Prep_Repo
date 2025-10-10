@@ -31,5 +31,4 @@ do{
     while(turn==0 && flag[0]==true); //busy wait
     //critical section
     flag[1]=false;
-    //remainder section
-}
+}while(1);
