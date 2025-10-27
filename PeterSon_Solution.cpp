@@ -24,7 +24,6 @@ do{
     //remainder section
 }while(1);
 
-
 do{
     flag[1]=true;
     turn=0;
