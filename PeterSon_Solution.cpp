@@ -12,7 +12,7 @@
 
 // flag[2] = which process is ready to enter Critical Section
 // turn = which process's turn is to enter Critical Section
-flag[i]=ture //represents that process i is ready to enter CS
+// flag[i]=true //represents that process i is ready to enter CS
 
 
 do{
