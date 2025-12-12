@@ -1,0 +1,61 @@
+______________________________________________________________________________
+#factorial of a number
+echo "Enter the value for n "
+read n
+fact=1
+for((i=1;i<=n;i++))
+do 
+       fact=$((fact*i))
+done
+
+echo "Factorial of $n is : $fact"
+
+
+_____________________________________________________________________________
+#print the table of n
+
+echo "For which number, you want to print the multiplication table : "
+read n
+
+for((i=1;i<=10;i++))
+do
+          echo "$n X $i = $((i*n))"
+done
+
+_____________________________________________________________________________
+#print the first n Fibonacci series
+echo "Enter value for n to generate fibonacci series : "
+read n
+a=-1
+b=1
+for((i=1;i<=n;i++))
+do
+      c=$((a+b))
+      echo $c
+      a=$b
+      b=$c
+done
+_____________________________________________________________________________
+#check if a number is even or odd
+echo "Enter value for n : "
+read n
+
+if [ $((n % 2)) -eq 0 ]
+then 
+       echo "Number is Even"
+else
+       echo "Number is Odd"
+fi
+_____________________________________________________________________________
+#check if a number is positive ,zero or negative
+echo "Enter value for n : "
+read n
+if [ $n -lt 0 ]
+then 
+      echo "Number is negative"
+elif [ $n -gt 0 ]
+then 
+      echo "Number is Positive"
+else
+     echo "Number is 0"
+fi
